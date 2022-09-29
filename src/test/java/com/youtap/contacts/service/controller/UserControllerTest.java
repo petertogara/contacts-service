@@ -7,6 +7,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.http.ResponseEntity;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
@@ -19,21 +20,20 @@ import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @WebMvcTest(UserController.class)
-public class UserControllerTest {
+ class UserControllerTest {
 
 	@Autowired
 	private UserController userController;
 	@Autowired
 	private MockMvc        mockMvc;
-
 	@MockBean
 	private UserService userService;
 
 	@Test
-	public void getUserByIdExistsSuccessTest() throws Exception {
+	 void getUserByIdExistsSuccessTest() throws Exception {
 
 		ObjectMapper objectMapper = new ObjectMapper();
-		final UserResponseDto userResponse =
+		 UserResponseDto userResponse =
 				objectMapper.readValue(new URL("file:src/test/resources/simulate/sample_user_by_userid.json"),
 						UserResponseDto.class);
 
@@ -48,10 +48,10 @@ public class UserControllerTest {
 	}
 
 	@Test
-	public void getUserByUsernameExistsSuccessTest() throws Exception {
+	 void getUserByUsernameExistsSuccessTest() throws Exception {
 
 		ObjectMapper objectMapper = new ObjectMapper();
-		final UserResponseDto userResponse =
+		 UserResponseDto userResponse =
 				objectMapper.readValue(new URL("file:src/test/resources/simulate/sample_user_by_username.json"),
 						UserResponseDto.class);
 
@@ -67,7 +67,7 @@ public class UserControllerTest {
 	}
 
 	@Test
-	public void getUserByIdNotFoundTest() throws Exception {
+	 void getUserByIdNotFoundTest() throws Exception {
 
 		UserResponseDto userResponse = new UserResponseDto();
 
@@ -83,7 +83,7 @@ public class UserControllerTest {
 	}
 
 	@Test
-	public void getUserByUsernameNotFoundTest() throws Exception {
+	 void getUserByUsernameNotFoundTest() throws Exception {
 
 		UserResponseDto userResponse = new UserResponseDto();
 
