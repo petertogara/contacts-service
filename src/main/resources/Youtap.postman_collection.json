@@ -1,0 +1,105 @@
+{
+	"info": {
+		"_postman_id": "576fced2-8981-477a-ba3b-18a1a32cb24b",
+		"name": "Youtap API Test Cases",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Search By Existing UserId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/getusercontacts/5",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"getusercontacts",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search By User Id that does not exist",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/getusercontacts/24",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"getusercontacts",
+						"24"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search By Username that does not exist",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/getusercontacts/Togara",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"getusercontacts",
+						"Togara"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search By Existing Username",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/getusercontacts/Leopoldo_Corkery",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"getusercontacts",
+						"Leopoldo_Corkery"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
