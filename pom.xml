@@ -10,7 +10,7 @@
     </parent>
     <groupId>com.youtap</groupId>
     <artifactId>contacts-service</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+             <version>1.0.0-RELEASE</version>
     <name>contacts-service</name>
     <description>Youtap Contacts Service</description>
     <properties>
